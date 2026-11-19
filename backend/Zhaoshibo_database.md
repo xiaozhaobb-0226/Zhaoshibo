@@ -44,3 +44,14 @@ INSERT INTO Zhaoshibo_gallery (Zhaoshibo_title, Zhaoshibo_image_url, Zhaoshibo_d
 ('实验室科研', 'https://picsum.photos/id/6/600/400', '科研人员在实验室中操作精密仪器，探索未知世界的奥秘。', '2026-11-13 11:05:00'),
 ('无人机航拍', 'https://picsum.photos/id/8/600/400', '消费级无人机航拍城市景观，低空经济正在改变我们的生活方式。', '2026-11-12 16:30:00'),
 ('机器人协作', 'https://picsum.photos/id/16/600/400', '人形机器人与人类协同工作，具身智能成为人工智能发展的新方向。', '2026-11-11 09:00:00');
+
+## 2026-11-19 | 更新图文图片地址（AI 生成图片与文字匹配，保存于 frontend/images/）
+
+UPDATE Zhaoshibo_gallery SET Zhaoshibo_image_url='/images/Zhaoshibo_datacenter.png' WHERE Zhaoshibo_id=1;
+UPDATE Zhaoshibo_gallery SET Zhaoshibo_image_url='/images/Zhaoshibo_chip.png' WHERE Zhaoshibo_id=2;
+UPDATE Zhaoshibo_gallery SET Zhaoshibo_image_url='/images/Zhaoshibo_coding.png' WHERE Zhaoshibo_id=3;
+UPDATE Zhaoshibo_gallery SET Zhaoshibo_image_url='/images/Zhaoshibo_robotic_arm.png' WHERE Zhaoshibo_id=4;
+UPDATE Zhaoshibo_gallery SET Zhaoshibo_image_url='/images/Zhaoshibo_rocket.png' WHERE Zhaoshibo_id=5;
+UPDATE Zhaoshibo_gallery SET Zhaoshibo_image_url='/images/Zhaoshibo_lab.png' WHERE Zhaoshibo_id=6;
+UPDATE Zhaoshibo_gallery SET Zhaoshibo_image_url='/images/Zhaoshibo_drone.png' WHERE Zhaoshibo_id=7;
+UPDATE Zhaoshibo_gallery SET Zhaoshibo_image_url='/images/Zhaoshibo_robot.png' WHERE Zhaoshibo_id=8;
