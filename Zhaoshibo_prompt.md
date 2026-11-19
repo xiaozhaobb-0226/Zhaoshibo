@@ -15,6 +15,10 @@
 ## 2026-11-19 | 大模型：Auto
 ### 提示词全文
 帮我将项目再优化的更精美一些
+
+## 2026-11-19 | 大模型：Auto
+### 提示词全文
+创建技能 skill：提交到 GitHub，将本项目提交 commit 并 push 到 `https://github.com/xiaozhaobb-0226/Zhaoshibo.git`
 1、 git init + .gitignore（排除 node_modules、.env）+ 首次提交
 2、按 AGENTS.md 规则创建前后端目录骨架、安装依赖、
 3、创建前端首页index.html，包括姓名**、学号**、项目名称：知乎制作和模仿、项目类别：模仿，所有完成的html页面的超链接。有canvas背景动画。主体是页面链接导航。页面美观。
