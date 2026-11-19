@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+  姓名：赵士渤 | 学号：24001050205 | 时间：2026-11-19 | 大模型：Auto
+  图文列表页：展示数据库中的图文数据与后端接口链接
+-->
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图文列表 - 赵士渤</title>
+  <link rel="stylesheet" href="css/Zhaoshibo_style.css">
+  <link rel="stylesheet" href="css/Zhaoshibo_page.css">
+</head>
+<body>
+  <canvas id="ZhaoshiboCanvas" class="Zhaoshibo_bg-canvas"></canvas>
+
+  <nav class="Zhaoshibo_navbar">
+    <a href="index.html" class="Zhaoshibo_brand">ZHADOSHIBO · 全栈实验室</a>
+    <div class="Zhaoshibo_nav-links" id="ZhaoshiboNav"></div>
+  </nav>
+
+  <div class="Zhaoshibo_content">
+    <div class="Zhaoshibo_card">
+      <h1 class="Zhaoshibo_title">图文列表</h1>
+      <span class="Zhaoshibo_api-link">GET /api/Zhaoshibo_gallery</span>
+      <div id="ZhaoshiboGalleryStatus" class="Zhaoshibo_status"></div>
+      <div id="ZhaoshiboGalleryGrid" class="Zhaoshibo_gallery-grid"></div>
+    </div>
+  </div>
+
+  <footer class="Zhaoshibo_footer">
+    © 2026 赵士渤 24001050205 · 高级网页设计 · 全栈开发项目
+  </footer>
+
+  <script src="js/Zhaoshibo_common.js"></script>
+  <script src="js/Zhaoshibo_index.js"></script>
+  <script src="js/Zhaoshibo_gallery.js"></script>
+</body>
+</html>

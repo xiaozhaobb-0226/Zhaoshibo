@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+  姓名：赵士渤 | 学号：24001050205 | 时间：2026-11-19 | 大模型：Auto
+  项目首页：项目信息展示 + 页面导航 + canvas 粒子背景动画
+-->
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>赵士渤的全栈开发项目 - 首页</title>
+  <link rel="stylesheet" href="css/Zhaoshibo_style.css">
+  <link rel="stylesheet" href="css/Zhaoshibo_page.css">
+</head>
+<body>
+  <canvas id="ZhaoshiboCanvas" class="Zhaoshibo_bg-canvas"></canvas>
+
+  <nav class="Zhaoshibo_navbar">
+    <a href="index.html" class="Zhaoshibo_brand">ZHADOSHIBO · 全栈实验室</a>
+    <div class="Zhaoshibo_nav-links" id="ZhaoshiboNav"></div>
+  </nav>
+
+  <div class="Zhaoshibo_content">
+    <!-- 项目信息卡片 -->
+    <div class="Zhaoshibo_card Zhaoshibo_hero">
+      <h1 class="Zhaoshibo_hero-title">科技资讯全栈开发平台</h1>
+      <div class="Zhaoshibo_hero-info">
+        <div class="Zhaoshibo_hero-item">
+          <span class="Zhaoshibo_label">姓名</span>
+          <span class="Zhaoshibo_value">赵士渤</span>
+        </div>
+        <div class="Zhaoshibo_hero-item">
+          <span class="Zhaoshibo_label">学号</span>
+          <span class="Zhaoshibo_value">24001050205</span>
+        </div>
+        <div class="Zhaoshibo_hero-item">
+          <span class="Zhaoshibo_label">项目名称</span>
+          <span class="Zhaoshibo_value">科技资讯全栈开发平台</span>
+        </div>
+        <div class="Zhaoshibo_hero-item">
+          <span class="Zhaoshibo_label">项目类别</span>
+          <span class="Zhaoshibo_value">自选</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 页面导航主体 -->
+    <div class="Zhaoshibo_card">
+      <h2 class="Zhaoshibo_title">功能页面导航</h2>
+      <div class="Zhaoshibo_entry-grid">
+        <a href="database.html" class="Zhaoshibo_entry">
+          <span class="Zhaoshibo_entry-icon">🗄</span>
+          <span class="Zhaoshibo_entry-name">数据库连接测试</span>
+          <span class="Zhaoshibo_entry-desc">输入用户名密码，测试 MySQL 连接状态</span>
+        </a>
+        <a href="news.html" class="Zhaoshibo_entry">
+          <span class="Zhaoshibo_entry-icon">📰</span>
+          <span class="Zhaoshibo_entry-name">科技新闻列表</span>
+          <span class="Zhaoshibo_entry-desc">数据库存储的新闻数据，后端接口实时获取</span>
+        </a>
+        <a href="gallery.html" class="Zhaoshibo_entry">
+          <span class="Zhaoshibo_entry-icon">🖼</span>
+          <span class="Zhaoshibo_entry-name">图文列表</span>
+          <span class="Zhaoshibo_entry-desc">图文混排展示，图片与文字数据均来自数据库</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="Zhaoshibo_footer">
+    © 2026 赵士渤 24001050205 · 高级网页设计 · 全栈开发项目
+  </footer>
+
+  <script src="js/Zhaoshibo_common.js"></script>
+  <script src="js/Zhaoshibo_index.js"></script>
+</body>
+</html>

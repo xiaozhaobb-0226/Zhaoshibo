@@ -1,0 +1,158 @@
+/*
+ * 姓名：赵士渤 | 学号：24001050205 | 时间：2026-11-19 | 大模型：Auto
+ * 公共样式：深色科技风主题
+ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  background: #0a0e1a;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+.Zhaoshibo_page {
+  position: relative;
+  min-height: 100vh;
+}
+
+.Zhaoshibo_bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+.Zhaoshibo_content {
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.Zhaoshibo_navbar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: rgba(13, 18, 34, 0.85);
+  border-bottom: 1px solid rgba(80, 130, 255, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.Zhaoshibo_brand {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6ea8ff;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.Zhaoshibo_nav-links a {
+  color: #a8b3cf;
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.Zhaoshibo_nav-links a:hover,
+.Zhaoshibo_nav-links a.Zhaoshibo_active {
+  color: #6ea8ff;
+}
+
+.Zhaoshibo_card {
+  background: rgba(17, 24, 44, 0.8);
+  border: 1px solid rgba(80, 130, 255, 0.22);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 22px;
+  backdrop-filter: blur(6px);
+}
+
+.Zhaoshibo_title {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 14px;
+  border-left: 4px solid #4f8cff;
+  padding-left: 12px;
+}
+
+.Zhaoshibo_api-link {
+  display: inline-block;
+  color: #63d8a2;
+  background: rgba(99, 216, 162, 0.08);
+  border: 1px solid rgba(99, 216, 162, 0.35);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  word-break: break-all;
+}
+
+.Zhaoshibo_status {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  display: none;
+}
+
+.Zhaoshibo_status.Zhaoshibo_success {
+  display: block;
+  background: rgba(46, 160, 67, 0.15);
+  border: 1px solid rgba(63, 185, 80, 0.5);
+  color: #7ee787;
+}
+
+.Zhaoshibo_status.Zhaoshibo_error {
+  display: block;
+  background: rgba(218, 54, 51, 0.15);
+  border: 1px solid rgba(248, 81, 73, 0.5);
+  color: #ff7b72;
+}
+
+.Zhaoshibo_input,
+.Zhaoshibo_btn {
+  font-size: 14px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.Zhaoshibo_input {
+  padding: 10px 14px;
+  background: rgba(10, 15, 30, 0.9);
+  border: 1px solid rgba(110, 168, 255, 0.35);
+  color: #e2e8f0;
+  width: 240px;
+}
+
+.Zhaoshibo_input:focus {
+  border-color: #6ea8ff;
+}
+
+.Zhaoshibo_btn {
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #2f6bff, #56b3ff);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.Zhaoshibo_btn:hover { opacity: 0.85; }
+
+.Zhaoshibo_footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+  color: #5a6b8f;
+  font-size: 13px;
+}
