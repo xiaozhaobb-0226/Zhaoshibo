@@ -29,6 +29,16 @@ description: 将本项目提交 commit 并 push 到指定的 GitHub 远程仓库
    ```
    后续推送使用 `git push origin main`。
 
+## 本机 SSL 证书注意事项
+
+本机使用 OpenSSL 后端推送时会报错：
+`SSL certificate OpenSSL verify result: unable to get local issuer certificate (20)`
+
+解决办法：推送命令前附加 `-c http.sslBackend=schannel`，改用 Windows 证书存储校验（单次生效，不修改 git 全局配置）：
+```bash
+git -c http.sslBackend=schannel push -u origin main
+```
+
 ## 异常处理
 
 - **认证失败**（403 / Authentication failed）：提示用户在 Windows 凭据管理器或 Git Credential Manager 中更新 GitHub 账号凭据，或使用 Personal Access Token 作为密码重新认证。
