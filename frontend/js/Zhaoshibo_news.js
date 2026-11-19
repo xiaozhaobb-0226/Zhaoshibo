@@ -13,10 +13,9 @@ document.addEventListener('DOMContentLoaded', async function () {
     statusEl.className = 'Zhaoshibo_status Zhaoshibo_success';
     listEl.innerHTML = json.data.map(function (n) {
       return '<div class="Zhaoshibo_card Zhaoshibo_news-item">' +
-        '<h3>' + n.Zhaoshibo_title + '</h3>' +
-        '<p class="Zhaoshibo_meta">分类：' + n.Zhaoshibo_category +
-        ' | 作者：' + n.Zhaoshibo_author +
-        ' | 时间：' + n.Zhaoshibo_publish_time + '</p>' +
+        '<h3><span class="Zhaoshibo_tag">' + n.Zhaoshibo_category + '</span>' + n.Zhaoshibo_title + '</h3>' +
+        '<p class="Zhaoshibo_meta">作者：' + n.Zhaoshibo_author +
+        ' | 发布时间：' + n.Zhaoshibo_publish_time + '</p>' +
         '<p class="Zhaoshibo_desc">' + n.Zhaoshibo_content + '</p>' +
         '</div>';
     }).join('');

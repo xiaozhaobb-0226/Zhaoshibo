@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
   async function ZhaoshiboTest() {
     statusEl.className = 'Zhaoshibo_status';
     resultEl.innerHTML = '';
+    btn.disabled = true;
+    btn.textContent = '连接中...';
+
     const json = await ZhaoshiboFetchJson('/api/Zhaoshibo_database/test', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -26,15 +29,18 @@ document.addEventListener('DOMContentLoaded', function () {
       statusEl.className = 'Zhaoshibo_status Zhaoshibo_success';
       const d = json.data;
       resultEl.innerHTML =
-        '<p>主机：' + d.host + '</p>' +
-        '<p>数据库：' + d.database + '</p>' +
-        '<p>MySQL 版本：' + d.version + '</p>' +
-        '<p>数据表数量：' + d.tableCount + '</p>';
+        '<p>主机地址：<span>' + d.host + '</span></p>' +
+        '<p>数据库名：<span>' + d.database + '</span></p>' +
+        '<p>MySQL 版本：<span>' + d.version + '</span></p>' +
+        '<p>数据表数量：<span>' + d.tableCount + '</span></p>';
     } else {
       statusEl.textContent = '✗ ' + json.msg;
       statusEl.className = 'Zhaoshibo_status Zhaoshibo_error';
       resultEl.innerHTML = '';
     }
+
+    btn.disabled = false;
+    btn.textContent = '测试连接';
   }
 
   btn.addEventListener('click', ZhaoshiboTest);

@@ -9,6 +9,17 @@
 
   let ZhaoshiboParticles = [];
   const ZhaoshiboCount = 90;
+  const ZhaoshiboMouse = { x: -1000, y: -1000 };
+
+  window.addEventListener('mousemove', function (e) {
+    ZhaoshiboMouse.x = e.clientX;
+    ZhaoshiboMouse.y = e.clientY;
+  });
+
+  window.addEventListener('mouseleave', function () {
+    ZhaoshiboMouse.x = -1000;
+    ZhaoshiboMouse.y = -1000;
+  });
 
   function ZhaoshiboResize() {
     canvas.width = window.innerWidth;
@@ -36,6 +47,16 @@
       const p = ZhaoshiboParticles[i];
       p.x += p.vx;
       p.y += p.vy;
+
+      // 鼠标附近的粒子轻微偏移，形成跟随效果
+      const mdx = p.x - ZhaoshiboMouse.x;
+      const mdy = p.y - ZhaoshiboMouse.y;
+      const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+      if (mdist < 150 && mdist > 0.01) {
+        p.x += (mdx / mdist) * 0.6;
+        p.y += (mdy / mdist) * 0.6;
+      }
+
       if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
       if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
 
